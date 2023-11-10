@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "name": "Chiken Salad",
+        "picture": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D",
+        "ingredients": [
+            "ingredient_1",
+            "ingredient_2",
+            "ingredient_3",
+            "ingredient_4",
+            "ingredient_5",
+            "ingredient_6",
+            "ingredient_7"
+        ],
+        "note": "this is a note on how to coock",
+        "protein": 45,
+        "calories": 475,
+        "time": 30,
+        "meal": "lunch",
+        "price": 30
+    },
+    {
+        "id": 1,
+        "name": "Tajin",
+        "picture": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D",
+        "ingredients": [
+            "ingredient_1",
+            "ingredient_2",
+            "ingredient_3",
+            "ingredient_4",
+            "ingredient_5",
+            "ingredient_6",
+            "ingredient_7"
+        ],
+        "note": "this is a note on how to coock",
+        "protein": 45,
+        "calories": 475,
+        "time": 30,
+        "meal": "dinner",
+        "price": 30
+    }
+]
