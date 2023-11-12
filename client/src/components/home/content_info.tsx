@@ -9,7 +9,7 @@ export default function Info({ recipe, setShowModal }: InfoProps) {
 
     return (
         <div className="fixed z-20 inline-flex items-center mx-auto inset-0  bg-black bg-opacity-30 max-w-full ">
-            <div className="container bg-gradient-to-r to-cyan-600 from-cyan-500 rounded-xl shadow-xl mx-auto max-w-4xl ">
+            <div className="container bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-xl shadow-xl mx-auto max-w-4xl ">
                 <button className="inline-flex items-center rounded-full ml-[880px]  -mt-4   w-9 h-9 hover:cursor-pointer bg-red-500 hover:bg-red-600 focus:outline-none shadow-lg" onClick={() => setShowModal(false)}>
                     <span className='text-[22px] text-center text-white ml-2 '>&#10007;</span>
                 </button>

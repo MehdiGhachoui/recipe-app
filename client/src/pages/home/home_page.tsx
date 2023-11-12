@@ -22,13 +22,15 @@ export default function Home() {
         else setFoundRecipe(rescipes.filter((x) => x.meal == mealType))
     }, [mealType])
 
-    return <div>
-        <Header setInput={setSearchValue} />
-        <Menu setType={setMealType} type={mealType} />
-        <div className="mt-7 grid grid-cols-4 z-10 gap-4">
-            {
-                foundRecipe.map(r => <Content recipe={r} />)
-            }
-        </div>
-    </div>
+    return (
+        <main className="max-w-[1100px] m-auto px-0 py-2">
+            <Header setInput={setSearchValue} />
+            <Menu setType={setMealType} type={mealType} />
+            <div className="mt-7 grid grid-cols-4 z-10 gap-4">
+                {
+                    foundRecipe.map(r => <Content recipe={r} />)
+                }
+            </div>
+        </main>
+    )
 }
