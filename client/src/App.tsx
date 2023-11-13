@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from "./pages/home/home_page"
 import Auth from "./pages/authentication/auth_page"
+import RequireAuth from "./hoc/requireAuth"
+import AuthProvider from "./context/auth/AuthProvider"
 
 
 const router = createBrowserRouter([
@@ -10,13 +12,19 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <Home />
+    element:
+      <RequireAuth>
+        <Home />
+      </RequireAuth>
   }
 ])
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+
   )
 }
 

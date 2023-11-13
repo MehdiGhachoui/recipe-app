@@ -4,7 +4,7 @@ type SignupProps = {
 export default function Signup({ active }: SignupProps) {
 
     return (
-        <div className={`absolute top-0 h-full  transition-all  left-0 w-6/12  ${active ? "translate-x-full opacity-100 z-5  bg-white duration-1000" : "z-1 opacity-0 duration-500"}`}>
+        <div className={`absolute top-0 h-full  transition-all  left-0 w-6/12 duration-[600ms] ${active ? "translate-x-full opacity-100 z-[5]  bg-white" : "z-[1] opacity-0  "}`}>
             <form className="form">
                 <h1 className="h1">Create Account</h1>
 
@@ -15,6 +15,7 @@ export default function Signup({ active }: SignupProps) {
 
                 <button className="button">Sign Up</button>
             </form>
+
         </div>
     )
 }

@@ -9,7 +9,7 @@ export default function Menu({ type, setType }: MealProps) {
 
     return (
 
-        <div className="flex justify-between px-[1rem] py-0 mt-3 text-center">
+        <div className="flex justify-between px-[1rem] py-0 mt-2 text-center ">
             <button onClick={() => setType(type == "breakfast" ? "" : "breakfast")} className={`cursor-pointer ${type == "breakfast" ? "text-black" : "text-gray-400"}`}>
                 <FontAwesomeIcon icon={faBreadSlice} style={type == "breakfast" ? { color: "black", } : { color: "#4b5563", }} />
                 <p className="text-xs">Breakfast</p>
