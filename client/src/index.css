@@ -36,7 +36,7 @@
     }
 
     .input {
-        @apply bg-gray-200 border-none outline-none mx-0 my-2 py-[10px] px-[15px] rounded-lg text-sm w-full
+        @apply bg-gray-200 border outline-none mx-0 my-2 py-[10px] px-[15px] rounded-lg text-sm w-full
     }
 
     .h1 {

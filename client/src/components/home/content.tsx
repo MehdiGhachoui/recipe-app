@@ -21,7 +21,7 @@ export default function Content({ recipe }: ContentProps) {
             }
             <div key={recipe.id}>
                 <div className='relative group overflow-hidden'>
-                    <img className="rounded-xl "
+                    <img className="rounded-xl max-h-[263px] max-w-[263px] h-full w-full"
                         src={recipe.picture}
                         alt="/"
                     />

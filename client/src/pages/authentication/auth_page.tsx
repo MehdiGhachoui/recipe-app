@@ -11,10 +11,10 @@ export default function Auth() {
                 <Signin active={active} />
                 <Signup active={active} />
                 {/* } */}
-                <div className={`absolute top-0 left-2/4 w-[50%] h-full overflow-hidden transition-all duration-[600ms] ease-in-out z-[1000] ${active ? "-translate-x-full rounded-r-[100px]" : "rounded-l-[100px]"}`}>
+                <div className={`absolute top-0 left-2/4 w-[50%] h-full overflow-hidden transition-all duration-[500ms] ease-in-out z-[1000] ${active ? "-translate-x-full rounded-r-[100px]" : "rounded-l-[100px]"}`}>
                     <div className={`relative h-full bg-gradient-to-r from-orange-400 to-orange-500 text-white  -left-full w-[200%] transition-all duration-700 ease-in-out ${active ? "translate-x-2/4" : "translate-x-0"}`}>
                         <div className={`absolute w-6/12 h-full flex items-center justify-center flex-col space-y-6 py-0 px-[30px] text-center top-0 transition-all duration-700 ease-in-out ${active ? "translate-x-0" : "-translate-x-[200%]"}`}>
-                            <h1 className="h1" >Welcome Back!</h1>
+                            <h1 className="h1" >Welcome to Foodie!</h1>
                             <p >Enter your personal details to use all of site features</p>
                             <button onClick={() => setActive(false)} className="button bg-transparent border-white" id="login">Sign In</button>
                         </div>

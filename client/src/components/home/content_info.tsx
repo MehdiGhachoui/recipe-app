@@ -17,7 +17,7 @@ export default function Info({ recipe, setShowModal }: InfoProps) {
                 <div className="p-8 grid grid-cols-3 gap-2 -mt-8 ">
                     <div className="col-span-1 ">
                         <div className="relative group overflow-hidden">
-                            <img className="rounded-xl shadow-lg"
+                            <img className="rounded-xl shadow-lg max-h-[272px] max-w-[272px] h-full w-full"
                                 src={recipe.picture}
                                 alt="/"
                             />
