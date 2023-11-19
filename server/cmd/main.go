@@ -6,6 +6,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/mehdighachoui/recipe-app/internal/recipe"
 )
 
 func main() {
@@ -20,6 +21,16 @@ func main() {
 		w.WriteHeader(http.StatusOK)
 	})
 
-	fmt.Println("Server Starting on port :8001...")
-	http.ListenAndServe(":8001", r)
+	//Recipe Domain
+	recipe.NewRoute(r)
+
+	srv := &http.Server{
+		Handler: r,
+		Addr:    "127.0.0.1:8000",
+	}
+
+	fmt.Println("Server Starting on port :8000...")
+	if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		fmt.Println("Server startup failure...")
+	}
 }
