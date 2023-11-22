@@ -4,8 +4,8 @@ type Repository struct {
 	service *Service
 }
 
-func NewRepository() *Repository {
+func RecipeRepository() *Repository {
 	return &Repository{
-		service: NewService(),
+		service: RecipeService(),
 	}
 }

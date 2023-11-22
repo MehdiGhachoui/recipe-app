@@ -3,6 +3,6 @@ package recipe
 type Service struct {
 }
 
-func NewService() *Service {
+func RecipeService() *Service {
 	return &Service{}
 }
