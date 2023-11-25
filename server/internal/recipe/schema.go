@@ -1,12 +1,16 @@
 package recipe
 
+import "time"
+
 type Recipe struct {
-	id          int
-	name        string
-	picture     string
-	ingredients []string
-	notes       string
-	calories    int
-	time        int
-	meal        string
+	ID          int8      `json:"id"`
+	Name        string    `json:"name"`
+	Picture     string    `json:"picture"`
+	Ingredients []string  `json:"ingredients"`
+	Note        string    `json:"note"`
+	Calories    int       `json:"calories"`
+	Protein     int       `json:"protein"`
+	Time        int       `json:"time"`
+	MealType    string    `json:"meal_type"`
+	CreatedAt   time.Time `json:"created_at"`
 }
