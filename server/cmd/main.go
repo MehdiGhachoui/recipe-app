@@ -28,12 +28,14 @@ func main() {
 	r.Use(middleware.RealIP)
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
-	//Health-Check
+
+	//Health Checker
 	r.Get("/healthcheck", func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 	})
-	//Recipe Domain
-	recipe.NewRoute(r, supabase)
+
+	//Domains
+	recipe.NewHTTP(r, supabase)
 
 	// Server Config
 	srv := &http.Server{
