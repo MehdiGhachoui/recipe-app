@@ -63,11 +63,11 @@ func NewSuccessResponse(status int, data interface{}) *Response {
 	}
 }
 
-func ErrInvalidRequest(err error, message string) render.Renderer {
+func ErrInvalidRequest(err error, status int, message string) render.Renderer {
 	return &ErrResponse{
-		HTTPStatusCode: http.StatusOK,
+		HTTPStatusCode: status,
 		Status: ResponseMeta{
-			AppStatusCode: http.StatusBadRequest,
+			AppStatusCode: status,
 			Message:       "ERROR",
 			ErrorMessage:  "Invalid Request",
 			ErrorDetail:   message,
