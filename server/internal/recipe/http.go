@@ -12,8 +12,8 @@ func NewHTTP(r *chi.Mux, s *supa.Client) {
 	r.Route("/recipe", func(r chi.Router) {
 		r.Get("/", repo.List)
 		r.Get("/{id}", repo.Search)
-		r.Get("/create", repo.Create)
-		r.Get("/update/{id}", repo.Update)
-		r.Get("/delete/{id}", repo.Delete)
+		r.Post("/create", repo.Create)
+		r.Put("/update/{id}", repo.Update)
+		r.Delete("/delete/{id}", repo.Delete)
 	})
 }

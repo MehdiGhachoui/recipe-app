@@ -38,6 +38,7 @@ func Error(err interface{}) *HTTPErr {
 	}
 }
 
+// Render for Error Responses
 func (e *ErrResponse) Render(w http.ResponseWriter, r *http.Request) error {
 	render.Status(r, e.HTTPStatusCode)
 	return nil
