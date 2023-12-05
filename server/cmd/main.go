@@ -7,8 +7,9 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	"github.com/mehdighachoui/recipe-app/cmd/utils"
+	"github.com/go-chi/cors"
 	"github.com/mehdighachoui/recipe-app/internal/recipe"
+	"github.com/mehdighachoui/recipe-app/utils"
 	supa "github.com/nedpals/supabase-go"
 )
 
@@ -24,6 +25,15 @@ func main() {
 
 	//INIT Chai
 	r := chi.NewRouter()
+	r.Use(cors.Handler(cors.Options{
+		AllowedOrigins:   []string{config.OriginURL},
+		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedHeaders:   []string{"Accept", "Content-Type", "Access-Control-Allow-Origin"},
+		ExposedHeaders:   []string{"Link"},
+		AllowCredentials: true,
+		MaxAge:           300,
+	}))
+
 	r.Use(middleware.RequestID)
 	r.Use(middleware.RealIP)
 	r.Use(middleware.Logger)

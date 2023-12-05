@@ -1,3 +1,11 @@
+export interface GetRecipeResponse {
+    status: {
+        AppStatusCode: number,
+        Message: string
+    };
+    data: IRecipe[];
+}
+
 export interface IRecipe {
     id: number;
     name: string;
@@ -6,7 +14,7 @@ export interface IRecipe {
     note: string;
     calories: number;
     time: number;
-    meal: string;
+    meal_type: string;
     protein: number,
     price: number;
 }

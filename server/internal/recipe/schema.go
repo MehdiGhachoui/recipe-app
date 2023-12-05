@@ -12,5 +12,6 @@ type Recipe struct {
 	Protein     int       `json:"protein"`
 	Time        int       `json:"time"`
 	MealType    string    `json:"meal_type"`
+	Price       float64   `json:"price"`
 	CreatedAt   time.Time `json:"created_at"`
 }

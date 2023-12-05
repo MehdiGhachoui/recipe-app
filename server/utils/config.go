@@ -6,6 +6,7 @@ type Config struct {
 	SupabaseURL   string `mapstructure:"SUPABASE_URL"`
 	SupabaseKEY   string `mapstructure:"SUPABASE_KEY"`
 	ServerAddress string `mapstructure:"SERVER_ADDRESS"`
+	OriginURL     string `mapstructure:"ORIGIN_URL"`
 }
 
 func LoadConfig(path string) (config Config, err error) {
